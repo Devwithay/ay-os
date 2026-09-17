@@ -23,14 +23,16 @@ import './styles/settings.css';
 
 function App() {
   const [activePage, setActivePage] = useState('dashboard');
-
+const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <GrowthProvider>
       <div className="app-shell">
-        <Sidebar
-          activePage={activePage}
-          setActivePage={setActivePage}
-        />
+       <Sidebar
+  activePage={activePage}
+  setActivePage={setActivePage}
+  isOpen={sidebarOpen}
+  setIsOpen={setSidebarOpen}
+/>
 
         <main className="main-content">
       {activePage === 'dashboard' && <Dashboard />}

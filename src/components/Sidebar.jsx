@@ -1,4 +1,9 @@
-export function Sidebar({ activePage, setActivePage }) {
+export function Sidebar({
+  activePage,
+  setActivePage,
+  isOpen,
+  setIsOpen,
+}) {
   const navigation = [
     { id: 'dashboard', label: 'Dashboard', icon: '⌂' },
     { id: 'mission', label: '30-Day Mission', icon: '◈' },
@@ -18,72 +23,105 @@ export function Sidebar({ activePage, setActivePage }) {
     { id: 'experiments', label: 'Experiments', icon: '⌁' },
   ];
 
+  const handleNavigation = (page) => {
+    setActivePage(page);
+    setIsOpen(false);
+  };
+
   return (
-    <aside className="sidebar">
-      <div className="sidebar-brand">
-        <div className="brand-mark">AY</div>
+    <>
+      {/* Mobile hamburger */}
+      <button
+        className="mobile-menu-button"
+        onClick={() => setIsOpen(true)}
+        aria-label="Open navigation"
+      >
+        ☰
+      </button>
 
-        <div>
-          <h2>AY OS</h2>
-          <span>Growth System</span>
-        </div>
-      </div>
+      {/* Overlay */}
+      {isOpen && (
+        <div
+          className="sidebar-overlay"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
 
-      <div className="sidebar-section">
-        <span className="sidebar-title">MAIN</span>
+      <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
+        <div className="sidebar-mobile-header">
+          <div className="sidebar-brand">
+            <div className="brand-mark">AY</div>
 
-        <nav>
-          {navigation.map((item) => (
-            <button
-              key={item.id}
-              className={`nav-item ${
-                activePage === item.id ? 'active' : ''
-              }`}
-              onClick={() => setActivePage(item.id)}
-            >
-              <span className="nav-icon">{item.icon}</span>
-              <span>{item.label}</span>
-            </button>
-          ))}
-        </nav>
-      </div>
+            <div>
+              <h2>AY OS</h2>
+              <span>Growth System</span>
+            </div>
+          </div>
 
-      <div className="sidebar-section secondary">
-        <span className="sidebar-title">SYSTEM</span>
-
-        <nav>
-          {secondaryNavigation.map((item) => (
-            <button
-              key={item.id}
-              className={`nav-item ${
-                activePage === item.id ? 'active' : ''
-              }`}
-              onClick={() => setActivePage(item.id)}
-            >
-              <span className="nav-icon">{item.icon}</span>
-              <span>{item.label}</span>
-            </button>
-          ))}
-        </nav>
-      </div>
-
-      <div className="sidebar-bottom">
-        <div className="focus-card">
-          <span>Today's focus</span>
-          <strong>Build, don't browse.</strong>
-          <small>One meaningful task at a time.</small>
+          <button
+            className="sidebar-close"
+            onClick={() => setIsOpen(false)}
+            aria-label="Close navigation"
+          >
+            ×
+          </button>
         </div>
 
-        <div className="profile">
-          <div className="profile-avatar">A</div>
+        <div className="sidebar-section">
+          <span className="sidebar-title">MAIN</span>
 
-          <div>
-            <strong>Ayomide</strong>
-            <span>Founder mode</span>
+          <nav>
+            {navigation.map((item) => (
+              <button
+                key={item.id}
+                className={`nav-item ${
+                  activePage === item.id ? 'active' : ''
+                }`}
+                onClick={() => handleNavigation(item.id)}
+              >
+                <span className="nav-icon">{item.icon}</span>
+                <span>{item.label}</span>
+              </button>
+            ))}
+          </nav>
+        </div>
+
+        <div className="sidebar-section secondary">
+          <span className="sidebar-title">SYSTEM</span>
+
+          <nav>
+            {secondaryNavigation.map((item) => (
+              <button
+                key={item.id}
+                className={`nav-item ${
+                  activePage === item.id ? 'active' : ''
+                }`}
+                onClick={() => handleNavigation(item.id)}
+              >
+                <span className="nav-icon">{item.icon}</span>
+                <span>{item.label}</span>
+              </button>
+            ))}
+          </nav>
+        </div>
+
+        <div className="sidebar-bottom">
+          <div className="focus-card">
+            <span>Today's focus</span>
+            <strong>Build, don't browse.</strong>
+            <small>One meaningful task at a time.</small>
+          </div>
+
+          <div className="profile">
+            <div className="profile-avatar">A</div>
+
+            <div>
+              <strong>Ayomide</strong>
+              <span>Founder mode</span>
+            </div>
           </div>
         </div>
-      </div>
-    </aside>
+      </aside>
+    </>
   );
 }
-
