@@ -1,0 +1,273 @@
+
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  display: block;
+  color: #69738a;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.dashboard-header h1 {
+  margin: 10px 0;
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+
+.dashboard-header p {
+  margin: 0;
+  color: #858da0;
+  font-size: 13px;
+}
+
+.day-badge {
+  min-width: 130px;
+  padding: 14px;
+  border: 1px solid #252b3b;
+  border-radius: 12px;
+  background: #141823;
+}
+
+.day-badge span {
+  display: block;
+  color: #69738a;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.day-badge strong {
+  display: block;
+  margin-top: 8px;
+  color: #60a5fa;
+  font-size: 20px;
+}
+
+.focus-banner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 1px solid #253d68;
+  border-radius: 16px;
+  background: linear-gradient(110deg, #142443, #121b2d);
+}
+
+.focus-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: #203a66;
+  font-size: 24px;
+}
+
+.focus-content h2 {
+  margin: 8px 0;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+}
+
+.focus-content p {
+  margin: 0;
+  color: #9ba8bf;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  padding: 18px;
+  border: 1px solid #242a38;
+  border-radius: 14px;
+  background: #12151f;
+}
+
+.stat-label {
+  display: block;
+  color: #6f788c;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+
+.stat-card strong {
+  display: block;
+  margin: 12px 0 8px;
+  font-size: 24px;
+  letter-spacing: -0.7px;
+}
+
+.stat-description {
+  color: #747e93;
+  font-size: 10px;
+}
+
+.dashboard-section {
+  margin-bottom: 32px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.section-heading h2 {
+  margin: 7px 0 0;
+  font-size: 18px;
+  letter-spacing: -0.4px;
+}
+
+.task-count {
+  padding: 7px 12px;
+  border-radius: 8px;
+  background: #1b2d52;
+  color: #8bbcff;
+  font-size: 11px;
+}
+
+.tasks-card {
+  border: 1px solid #242a38;
+  border-radius: 14px;
+  background: #12151f;
+}
+
+.task-placeholder {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 22px;
+}
+
+.placeholder-icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #293246;
+  border-radius: 10px;
+  color: #64748b;
+}
+
+.task-placeholder strong {
+  display: block;
+  font-size: 12px;
+}
+
+.task-placeholder p {
+  margin: 6px 0 0;
+  color: #6f788c;
+  font-size: 11px;
+}
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.mission-card {
+  padding: 22px;
+  border: 1px solid #242a38;
+  border-radius: 16px;
+  background: #12151f;
+}
+
+.mission-emoji {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 25px;
+}
+
+.mission-tag {
+  color: #69738a;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.mission-card h3 {
+  margin: 8px 0;
+  font-size: 20px;
+}
+
+.mission-card p {
+  margin: 0 0 18px;
+  color: #8a93a7;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.mission-status {
+  color: #60a5fa;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.forex-card .mission-status {
+  color: #a78bfa;
+}
+
+@media (max-width: 900px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-header {
+    flex-direction: column;
+  }
+
+  .dashboard-header h1 {
+    font-size: 25px;
+  }
+
+  .day-badge {
+    width: 100%;
+  }
+
+  .focus-banner {
+    align-items: flex-start;
+    padding: 18px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 14px;
+  }
+
+  .stat-card strong {
+    font-size: 21px;
+  }
+
+  .focus-grid {
+    grid-template-columns: 1fr;
+  }
+}

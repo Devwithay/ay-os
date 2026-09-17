@@ -1,0 +1,130 @@
+.brain-dump-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.brain-dump-input {
+  padding: 18px;
+  border: 1px solid #242a38;
+  border-radius: 14px;
+  background: #12151f;
+}
+
+.brain-dump-input textarea {
+  width: 100%;
+  min-height: 180px;
+  resize: vertical;
+  padding: 4px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #f5f7ff;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.brain-dump-input textarea::placeholder {
+  color: #596276;
+}
+
+.dump-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid #242a38;
+}
+
+.dump-footer span {
+  color: #626c80;
+  font-size: 10px;
+}
+
+.dump-footer button {
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 9px;
+  background: #2563eb;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.dump-list {
+  margin-top: 30px;
+}
+
+.dump-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.dump-heading strong {
+  color: #717b90;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.empty-dump {
+  padding: 50px 20px;
+  border: 1px dashed #292f3e;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.empty-dump span {
+  font-size: 24px;
+}
+
+.empty-dump strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.empty-dump p {
+  color: #697388;
+  font-size: 11px;
+}
+
+.dump-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 17px;
+  margin-bottom: 9px;
+  border: 1px solid #242a38;
+  border-radius: 12px;
+  background: #12151f;
+}
+
+.dump-item p {
+  margin: 0 0 8px;
+  color: #d9deea;
+  font-size: 12px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.dump-item small {
+  color: #596276;
+  font-size: 9px;
+}
+
+.dump-item button {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 7px;
+  background: #1b202c;
+  color: #7b8599;
+  font-size: 18px;
+}
+
+.dump-item button:hover {
+  background: #2a2026;
+  color: #fca5a5;
+}

@@ -1,0 +1,121 @@
+.reviews-page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.review-day {
+  padding: 14px 18px;
+  border: 1px solid #252b3b;
+  border-radius: 12px;
+  background: #141823;
+}
+
+.review-day span {
+  display: block;
+  color: #69738a;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.review-day strong {
+  display: block;
+  margin-top: 6px;
+  color: #60a5fa;
+  font-size: 18px;
+}
+
+.review-context {
+  padding: 22px;
+  margin-bottom: 18px;
+  border: 1px solid #253d68;
+  border-radius: 15px;
+  background: #121c2f;
+}
+
+.review-context h2 {
+  margin: 9px 0;
+  font-size: 20px;
+}
+
+.review-context p {
+  margin: 0;
+  color: #8c98ad;
+  font-size: 12px;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.review-field {
+  display: block;
+  padding: 18px;
+  border: 1px solid #242a38;
+  border-radius: 14px;
+  background: #12151f;
+}
+
+.review-field > span {
+  display: block;
+  margin-bottom: 12px;
+  color: #dce2ed;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.review-field textarea {
+  width: 100%;
+  min-height: 130px;
+  resize: vertical;
+  padding: 12px;
+  border: 1px solid #292f3e;
+  border-radius: 9px;
+  outline: none;
+  background: #0d1018;
+  color: #f5f7ff;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.review-field textarea::placeholder {
+  color: #565f72;
+}
+
+.review-field textarea:focus {
+  border-color: #3b82f6;
+}
+
+.review-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.saved-message {
+  color: #86efac;
+  font-size: 11px;
+}
+
+.save-review {
+  padding: 11px 17px;
+  border: 0;
+  border-radius: 9px;
+  background: #2563eb;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .page-header {
+    flex-direction: column;
+  }
+
+  .review-grid {
+    grid-template-columns: 1fr;
+  }
+}

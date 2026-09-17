@@ -1,0 +1,249 @@
+.forex-page,
+.journal-page {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.eyebrow,
+.muted-label,
+.week-number {
+  color: #4d8dff;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.page-header h1 {
+  margin: 8px 0;
+  font-size: 34px;
+  letter-spacing: -1px;
+}
+
+.page-header p {
+  margin: 0;
+  color: #747c90;
+  font-size: 12px;
+}
+
+.practice-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 12px;
+  border: 1px solid #283249;
+  border-radius: 20px;
+  background: #141a28;
+  color: #aab4c9;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.practice-badge span {
+  color: #4d8dff;
+}
+
+.forex-warning {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 13px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #2a3040;
+  border-radius: 11px;
+  background: #131720;
+  color: #858da0;
+  font-size: 11px;
+}
+
+.forex-warning strong {
+  color: #dce2ee;
+}
+
+.forex-overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.forex-progress-card {
+  padding: 20px;
+  border: 1px solid #222837;
+  border-radius: 14px;
+  background: #12151e;
+}
+
+.card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-heading h2 {
+  margin: 7px 0 0;
+  font-size: 30px;
+}
+
+.progress-ring {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #29344a;
+  border-radius: 50%;
+  color: #aeb9cf;
+  font-size: 9px;
+}
+
+.forex-progress-card.current h2 {
+  margin: 8px 0 16px;
+  font-size: 18px;
+}
+
+.progress-track {
+  height: 5px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #252b38;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #3b82f6;
+  transition: width 0.25s ease;
+}
+
+.forex-progress-card p {
+  margin: 10px 0 0;
+  color: #687084;
+  font-size: 10px;
+}
+
+.week-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: #697286;
+  font-size: 10px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 14px;
+}
+
+.section-heading h2 {
+  margin: 6px 0 0;
+  font-size: 20px;
+}
+
+.forex-weeks {
+  display: grid;
+  gap: 14px;
+}
+
+.forex-week {
+  padding: 20px;
+  border: 1px solid #222837;
+  border-radius: 14px;
+  background: #12151e;
+}
+
+.forex-week.locked {
+  opacity: 0.55;
+}
+
+.week-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.week-header h3 {
+  margin: 7px 0 5px;
+  font-size: 16px;
+}
+
+.week-header p {
+  margin: 0;
+  color: #737b8e;
+  font-size: 11px;
+}
+
+.week-percentage {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.lesson-list {
+  display: grid;
+  gap: 5px;
+  margin-top: 14px;
+}
+
+.lesson-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #858d9f;
+  text-align: left;
+  font-size: 11px;
+}
+
+.lesson-row:hover:not(:disabled) {
+  background: #181d28;
+  color: #dce1eb;
+}
+
+.lesson-row.completed {
+  color: #dce4f2;
+}
+
+.lesson-check {
+  width: 19px;
+  height: 19px;
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid #343b4c;
+  border-radius: 50%;
+  font-size: 9px;
+}
+
+.completed .lesson-check {
+  border-color: #3b82f6;
+  background: #1d4ed8;
+  color: white;
+}
+
+.lesson-lock {
+  margin-left: auto;
+  font-size: 9px;
+}
+
+@media (max-width: 800px) {
+  .forex-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .page-header {
+    flex-direction: column;
+  }
+}

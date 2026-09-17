@@ -1,0 +1,154 @@
+.analytics-page {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.analytics-card {
+  padding: 18px;
+  border: 1px solid #222837;
+  border-radius: 13px;
+  background: #12151e;
+}
+
+.analytics-card span {
+  display: block;
+  color: #697286;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.analytics-card strong {
+  display: block;
+  margin: 8px 0 5px;
+  font-size: 23px;
+}
+
+.analytics-card small {
+  color: #60697b;
+  font-size: 9px;
+}
+
+.analytics-section {
+  padding: 20px;
+  margin-bottom: 15px;
+  border: 1px solid #222837;
+  border-radius: 14px;
+  background: #12151e;
+}
+
+.analytics-section .section-heading {
+  margin-bottom: 18px;
+}
+
+.analytics-section .section-heading > strong {
+  font-size: 16px;
+}
+
+.analytics-progress {
+  height: 6px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #252b38;
+}
+
+.analytics-progress div {
+  height: 100%;
+  border-radius: inherit;
+  background: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+.analytics-note {
+  margin: 9px 0 0;
+  color: #687084;
+  font-size: 9px;
+}
+
+.skill-analytics {
+  display: grid;
+  gap: 16px;
+}
+
+.skill-analytics-row {
+  display: grid;
+  grid-template-columns: 180px 1fr 40px;
+  align-items: center;
+  gap: 15px;
+}
+
+.skill-analytics-row > div:first-child strong,
+.skill-analytics-row > div:first-child span {
+  display: block;
+}
+
+.skill-analytics-row > div:first-child strong {
+  font-size: 11px;
+}
+
+.skill-analytics-row > div:first-child span {
+  margin-top: 4px;
+  color: #687084;
+  font-size: 8px;
+}
+
+.skill-analytics-row > strong {
+  font-size: 10px;
+  text-align: right;
+}
+
+.journal-analytics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.journal-analytics div {
+  padding: 15px;
+  border-radius: 9px;
+  background: #0e1118;
+}
+
+.journal-analytics strong,
+.journal-analytics span {
+  display: block;
+}
+
+.journal-analytics strong {
+  font-size: 20px;
+}
+
+.journal-analytics span {
+  margin-top: 5px;
+  color: #687084;
+  font-size: 9px;
+}
+
+@media (max-width: 900px) {
+  .analytics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .analytics-grid,
+  .journal-analytics {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-analytics-row {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  .skill-analytics-row > strong {
+    text-align: left;
+  }
+}
